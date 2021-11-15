@@ -10,4 +10,6 @@ prep:
 	mkdir Output/
 
 run:
+	cd Output
 	mono Server.cil
+	cd ..
