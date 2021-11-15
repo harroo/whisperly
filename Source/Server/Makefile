@@ -8,8 +8,8 @@ output:
 
 prep:
 	mkdir Output/
+	echo "cd Output;mono Server.cil;cd .." >> test.sh
+	chmod 755 test.sh
 
 run:
-	cd Output
-	mono Server.cil
-	cd ..
+	./test.sh

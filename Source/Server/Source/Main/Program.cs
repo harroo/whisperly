@@ -4,17 +4,17 @@ using System.IO;
 
 namespace WhisperlyServer {
 
-    using UserGeneration.Visual;
+    using UserGeneration.Naming;
 
     public static class Program {
 
         public static void Main (string[] args) {
 
-            ImageSet set = ImageBuilder.BuildRandom();
+            for (int i = 0; i < 69; i++) {
 
-            foreach (var image in set.images) {
+                Name name = NameBuilder.BuildRandom();
 
-                File.WriteAllBytes(image.name, image.data);
+                Console.WriteLine(name.nickname +": "+ name.first + " "+name.middle+" "+name.last);
             }
         }
     }

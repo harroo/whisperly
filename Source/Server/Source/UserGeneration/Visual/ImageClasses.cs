@@ -7,6 +7,13 @@ namespace WhisperlyServer.UserGeneration.Visual {
     public class ImageSet {
 
         public List<Image> images = new List<Image>();
+
+        public Image GetRandom () {
+
+            Random random = new Random();
+
+            return images[random.Next(0, images.Count - 1)];
+        }
     }
 
     public class Image {
