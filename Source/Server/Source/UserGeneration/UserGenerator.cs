@@ -15,10 +15,12 @@ namespace WhisperlyServer.UserGeneration {
 
             Identity identity = new Identity();
 
-            identity.imageSet = ImageBuilder.BuildRandom();
+            int picSeed = ImageBuilder.GetImageSeed();
+
+            identity.imageSet = ImageBuilder.BuildRandomSET(picSeed);
             identity.name = NameBuilder.BuildRandom();
             identity.age = random.Next(14, 26);
-            identity.profilePicture = identity.imageSet.GetRandom();
+            identity.profilePicture = ImageBuilder.BuildRandomPFP(picSeed);
 
             return identity;
         }

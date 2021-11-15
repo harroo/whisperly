@@ -15,5 +15,11 @@ namespace WhisperlyServer.UserGeneration {
         public int age;
 
         public Image profilePicture;
+
+        public string GetSummary ()
+            => "Name: " + name.first + " " + name.middle + " " + name.last + " (" + name.nickname + ")"
+            + "\n" + "Age: " + age.ToString()
+            + "\n" + "PFP: " + profilePicture.name
+        ;
     }
 }
