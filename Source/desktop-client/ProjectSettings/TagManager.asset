@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - THEME_PANEL_I
+  - THEME_BACKGROUND
+  - THEME_TEXT_MAIN
+  - THEME_GRADIENT_MAIN
+  - THEME_PANEL_II
+  - THEME_BUTTON
   layers:
   - Default
   - TransparentFX
