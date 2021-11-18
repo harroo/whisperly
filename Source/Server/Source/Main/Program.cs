@@ -4,22 +4,18 @@ using System.IO;
 
 namespace WhisperlyServer {
 
-    using UserGeneration;
-
     public static class Program {
 
         public static void Main (string[] args) {
 
-            Identity id = UserGenerator.Generate();
+            Messages.Manager.Init();
+            Messages.Manager.InitPackets();
 
-            foreach (var image in id.imageSet.images) {
+            Network.Server.Start();
 
-                File.WriteAllBytes(image.name+".png", image.data);
-            }
+            Console.ReadKey();
 
-            File.WriteAllBytes(id.profilePicture.name+".jpg", id.profilePicture.data);
-
-            File.WriteAllText("INFO", id.GetSummary());
+            // Network.Server.Stop();
         }
     }
 }
