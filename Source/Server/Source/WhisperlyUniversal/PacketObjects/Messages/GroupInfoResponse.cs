@@ -10,12 +10,13 @@ namespace Packet {
     public class GroupInfoResponse {
 
         public Group[] groups;
+    }
 
-        public class Group {
+    [System.Serializable]
+    public class Group {
 
-            public string name;
+        public string name;
 
-            public ulong Id;
-        }
+        public ulong Id;
     }
 }
